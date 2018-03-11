@@ -23,11 +23,9 @@ class App extends Component {
     keys = Object.keys(mockjson.template);
     //this data can come from an api here
     for(let i = 0; i < keys.length; i++) {
-        let fixed = i==0?true:false;
         rowState[i] = {
                   label: keys[i],
-                  checked: false,
-                  fixed: fixed
+                  checked: false
                 }
      }
      this.setState({
