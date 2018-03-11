@@ -1,24 +1,33 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
 .App-header {
-  background-color: #222;
-  padding: 20px;
-  color: white;
+  display:flex;
+  border-bottom: solid;
+  border-bottom-color: #208DD0;
+  border-bottom-width: 3px;
+  margin-bottom:10px;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 11px;
+  margin-right: 11px;
 }
-
+.App-header .banner-img {
+  width:200px;
+  background-color: #208DD0;
+}
+.App-header .banner {
+  padding-left: 20px;
+}
+.App-header img {
+    height: 80px;
+    width:150px;
+    margin-bottom: 2px;
+  }
 .App-title {
   font-size: 1.4em;
-}
-
-.App-intro {
-  font-size: large;
 }
 
 .left-bar {
@@ -27,45 +36,91 @@
   margin-bottom: 50px;
   width: 200px;
   height: 100%;
-  height:580px;
+  height:600px;
   overflow:scroll;
   overflow-x:hidden;
   overflow-y:scroll;
+  border: solid;
+  border-width: .05em;
+  border-color: lightgray;
+  margin-left:10px;
 }
 
 .fix-column {
     float: left;
+    background-color: #E4F2FA;
 }
 
 table-body {
     overflow: auto;
 }
 .rest-columns {
-    height: 580px;
     overflow: auto;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow-x:scroll;
     overflow-y:scroll;
-    width: 300px;
+    width: 80%;
+    margin-left: 0;
     white-space: nowrap;
     font-size: 0;
+    display: flex;
 }
 .table-col {
     width: 150px;
-    box-shadow: inset 0 0 1px 0 rgba(0,0,0,.5);
     overflow: auto;
     resize: horizontal;
     font-size: 16px;
-    border: 1px solid lightgrey;
     display: inline-block;
+    position: relative;
+    left:0;
+    overflow: hidden;
+    min-width: 50px;
 }
 .col-header {
    background-color: lightgray;
-   padding: 5px;
-   font-weight: 600px;
+   padding: 9px;
+   font-size: 1em;
+   margin: 1px;
+}
+.col-data {
+   padding: 9px;
+   font-size: 0.9em;
+   margin: 1px;
+   text-align: left;
+}
+
+.col-data-link {
+   padding: 9px;
+   font-size: 0.9em;
+   margin: 1px;
+   text-align: left;
+}
+.col-data-link span {
+  float: right;
+  color: grey;
+  cursor: pointer;
+}
+
+.col-data-link:nth-child(odd){
+    background:#f3f3f3;
+}
+.col-data:nth-child(odd){
+    background:#f3f3f3;
 }
 
 .fix-column:first-child {
     margin-top: 0px;
+}
+.wrapper {
+    height: 600px;
+    border: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    margin-right: 15px;
+    margin-left: 215px;
+}
+.zero-state{
+  position: relative;
+  top:15%;
 }

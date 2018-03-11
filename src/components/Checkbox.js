@@ -1,14 +1,9 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 
 class Checkbox extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   toggleCheckboxChange = () => {
       this.props.handleCheckboxChange(this.props.label, !this.props.isChecked);
   }
-
   render() {
     return (
       <div className="form-horizontal">
