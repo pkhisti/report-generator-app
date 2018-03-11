@@ -4,6 +4,7 @@ import ReportFields from './components/ReportFields';
 import FixedColumns from './components/FixedColumns';
 import RestColumns from './components/RestColumns';
 import mockjson from './services/MockData';
+import Header from './components/Header';
 
 class App extends Component {
    constructor(props){
@@ -95,17 +96,9 @@ class App extends Component {
       }
   }
   render() {
-
     return (
       <div className="App">
-        <header className="App-header">
-          <div className="banner-img">
-              <img src="stats.png" alt="stats banner"/>
-          </div>
-         <div className="banner">
-            <h2 className="App-title">Fancy Report Generator</h2>
-         </div>
-        </header>
+        <Header/>
         <ReportFields row={this.state.rowState}  toggleSelectAllCheckbox={this.toggleSelectAllCheckbox} toggleCheckbox={this.toggleCheckbox}></ReportFields>
         <div className="wrapper">
           {this.renderZeroState()}
