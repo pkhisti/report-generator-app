@@ -43,6 +43,7 @@
   border: solid;
   border-width: .05em;
   border-color: lightgray;
+  background-color: #208DD0;
   margin-left:10px;
 }
 
@@ -123,4 +124,10 @@ table-body {
 .zero-state{
   position: relative;
   top:15%;
+}
+.select-all{
+  background-color:#f3f3f3;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }

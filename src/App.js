@@ -81,7 +81,21 @@ class App extends Component {
        )
     }
   }
+  renderFixed() {
+    const fixedColumns = this.state.selectedColumns.length>0?this.state.selectedColumns.filter((item,index)=>index===0)[0]:[];
+      if(this.state.selectedColumns.length>0) {
+        return (<div className="fix-column">
+            <FixedColumns data={fixedColumns}>
+            </FixedColumns>
+        </div>);
+      } else {
+        return(
+          <div></div>
+        );
+      }
+  }
   render() {
+
     return (
       <div className="App">
         <header className="App-header">
@@ -95,14 +109,11 @@ class App extends Component {
         <ReportFields row={this.state.rowState}  toggleSelectAllCheckbox={this.toggleSelectAllCheckbox} toggleCheckbox={this.toggleCheckbox}></ReportFields>
         <div className="wrapper">
           {this.renderZeroState()}
-          <div className="fix-column">
-            <FixedColumns data={this.state.selectedColumns.length>0?this.state.selectedColumns.filter((item,index)=>index===0)[0]:[]}>
-            </FixedColumns>
-          </div>
+          {this.renderFixed()}
           <div className="table-body">
            <div className="rest-columns">
               <RestColumns data={this.state.selectedColumns.length>1?this.state.selectedColumns.filter((item,index)=>index>0):[]}>
-            </RestColumns>
+             </RestColumns>
             </div>
           </div>
         </div>

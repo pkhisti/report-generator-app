@@ -30,17 +30,17 @@ createCheckboxes = () => (
  render() {
     return (
         <div className="left-bar">
-            <div className="panel panel-default">
+            <div className="panel panel-primary">
             <div className="panel-heading">Report Fields</div>
-                <div className="panel-body">
-                 <div className="well-sm">
+                 <div className="select-all">
                  <Checkbox
                     label="Select All"
                     key="selectAll"
                     handleCheckboxChange={this.toggleSelectAllCheckbox}
                  />
                  </div>
-                {this.createCheckboxes()}
+                <div className="panel-body">
+                    {this.createCheckboxes()}
                 </div>
             </div>
         </div>
